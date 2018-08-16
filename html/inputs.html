@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Input Types</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+        div{
+            background-color: orange;
+            padding: 10px;
+            border-radius: 10px;
+            width: 400px;
+            font-family: "Comic Sans MS", sans-serif;
+        }
+    </style>
+</head>
+<body>
+ <h2>Radio Field</h2>
+    <div>
+        <form>
+            <label>Is HTML Easy ?</label>
+            <input type="radio" name="easy" value="yes">YES
+            <input type="radio" name="easy" value="no">NO
+        </form>
+    </div>
+    
+    <h2>Check Box</h2>
+    <div>
+        <form>
+            <label>Select Your Hobbies</label>
+            <input type="checkbox" value="eating">Eating
+            <input type="checkbox" value="coding">Coding
+            <input type="checkbox" value="sleeping">Sleeping
+        </form>
+    </div>
+    
+    <h1 align="center">HTML5 Input Types</h1>
+
+    <!-- color -->
+    <h2>Input Type color</h2>
+    <div>
+        <form>
+            <label>Select a Color</label>
+            <input type="color">
+        </form>
+    </div>
+    
+    <h2>Input Type date</h2>
+    <div>
+        <form>
+            <label>Select a Date</label>
+            <input type="date">
+        </form>
+    </div>
+    
+    <h2>Input Type email</h2>
+    <div>
+        <form>
+            <label>Enter your Email id</label>
+            <input type="email">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+    <h2>Input Type month</h2>
+    <div>
+        <form>
+            <label>Select a Month</label>
+            <input type="month">
+        </form>
+    </div>
+    
+    <!-- file -->
+    <h2>Input type file</h2>
+    <div>
+        <form>
+            <label>Select a file</label>
+            <input type="file">
+        </form>
+    </div>
+    
+    
+    <h2>Input Type URL</h2>
+    <div>
+        <form>
+            <label>Enter Your Website</label>
+            <input type="url">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+    <!-- number -->
+    <h2>Input Type number</h2>
+    <div>
+        <form>
+            <label>Enter Your Age</label>
+            <input type="number" min="18" max="60">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+    <div>
+        <form>
+            <label>Select a Range</label>
+            <input type="range" min="0" max="100" id="some">100
+            <input type="button" value="send"
+                   onclick="alert(document.getElementById('some').value)">
+        </form>
+    </div>
+<br><br><br>
+</body>
+</html>

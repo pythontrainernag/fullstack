@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+body{
+background-color: lightgreen;
+}
+div{
+background-color: lightblue;
+}
+</style>
+</head>
+<body>
+<div>
+	<form>
+	<label>Inputs:</label>
+		<input type="text" value="Nag">
+	</form>
+	<br>
+	<form>
+	<label>Inputs:</label>
+		<input type="text" value="Nag" readonly>
+	</form>
+	<br>
+	<form>
+	<label>Inputs:</label>
+		<input type="text" value="Nag" disabled>
+	</form>
+	
+	<br>
+	<form>
+	<label>Inputs:</label>
+		<input type="text" required>
+	</form>
+	
+	<br>
+	<form>
+	<label>email:</label>
+		<input type="email">
+		<input type="button" value="submit">
+	</form>
+	
+	<br>
+	<form novalidate>
+	<label>email:</label>
+		<input type="email">
+		<input type="button" value="submit">
+	</form>
+	
+	<br>
+	<form>
+	<label>email:</label>
+		<input type="email" placeholder="enter a email">
+		<input type="button" value="submit">
+	</form>
+	
+	<br>
+	<form novalidate>
+	<label>email:</label>
+		<input type="email" autofocus>
+		<input type="button" value="submit">
+	</form>
+	
+	<br>
+	<div>
+        <form>
+            <label>inputs</label>
+            <input type="text" pattern="^[a-zA-Z]{1,15}$">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+</body>
+</html>

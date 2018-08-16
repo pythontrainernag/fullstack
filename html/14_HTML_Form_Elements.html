@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Form Elements</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- Simple Login Form -->
+    <h2>Simple Login Form</h2>
+    <div>
+    	<form>
+    		<label>Username:</label>
+    		<input type="text"><br>
+    		<label>Pass:</label>
+    		<input type="password"><br>
+    		<input type="button" value="submit">
+    		<input type="button" value="reset">
+    		
+    	</form>
+    </div>
+
+    <!-- Login form with Table -->
+    <h2>Login Form with Table</h2>
+    <form action="">
+    	<table>
+    		<tr>
+    			<td>
+    			<label>Username:</label>
+    			</td>
+    			<td>
+    				<input type="text">
+    			</td>
+    		</tr>
+    		<tr>
+    			<td>
+    			<label>Password:</label>
+    			</td>
+    			<td>
+    				<input type="password">
+    			</td>
+    		</tr>
+    		<tr>
+    			<td>
+    				<input type="button" value="submit">
+    			</td>
+    			<td>
+    				<input type="button" value="reset">
+    			</td>
+    		</tr>
+    	</table>
+    </form>
+    
+     <!-- Datalist (HTML5) -->
+    <h2>Datalist (HTML5)</h2>
+	<div>
+		<form>
+			<input list="languages">
+			<datalist id="languages">
+				<option>Python</option>
+				<option>Django</option>
+				<option>Html</option>
+				<option>Python 3.6</option>
+			</datalist>
+		</form>
+	</div>
+    
+
+    <!-- Select box with Options -->
+    <h2>Select Box with Options</h2>
+    <div>
+        <form>
+            <label>Select a Language</label>
+            <select>
+                <option>Select a language</option>
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>JavaScript</option>
+                <option>Bootstrap</option>
+                <option>Angular JS</option>
+                <option>Django</option>
+                <option>Python</option>
+            </select>
+        </form>
+    </div>
+    <!-- Textarea box -->
+    <h2>Textarea box</h2>
+    <div>
+    	<form>
+    		<textarea rows="5" cols="50"></textarea>
+    	</form>
+    </div>
+
+   </body>
+</html>
