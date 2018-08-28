@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+li {
+	border-color: red;
+	border-style: solid;
+	color: white;
+	background-color: lightgreen;
+	font-size: 25px;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+{% for obj in objs %}
+	<ul>
+		<li>{{ obj.id }} </li>
+		<li>{{ obj.first_name }} </li>
+	</ul>
+{% endfor %}
+</body>
+</html>
