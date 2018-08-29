@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 from django.http.response import HttpResponse
 from .models import Author
+from .forms import AuthorForm
 
 # Create your views here.
 
@@ -26,3 +27,15 @@ def log_html(request, *args, **kwargs):
 def author_data(request):
     x = Author.objects.all()
     return render(request, 'author.html', {'objs': x})
+
+def add_author(request):
+    form = AuthorForm(request.GET)
+    if form.is_valid():
+        data = form.cleaned_data
+        db_obj = Author(first_name=data['first_name'], last_name=data['last_name'], email=data['email'])
+        db_obj.save()
+        return HttpResponse("Data has been successfully inserted")
+    return render(request, 'addauthor.html', {'form': AuthorForm()})
+
+def success(request):
+    return render(request, 'success.html')

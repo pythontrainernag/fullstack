@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
-from .views import first, sec, first_html, sec_html, log_html, author_data
+from .views import first, sec, first_html, sec_html, log_html, author_data, add_author
 
 
 urlpatterns = [
@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^shtml/$', sec_html),
     url(r'^n(?P<name>[A-z1-9]+)/$', log_html),
     url(r'^authors/$', author_data),
+    url(r'^addauthor/$', add_author),
 ]
