@@ -1,0 +1,46 @@
+@charset "ISO-8859-1";
+
+	body {
+		background-color: darkgreen;
+	}
+	.sideMenu{
+		position:relative;
+		top: 100px;
+		width: 250px;
+	}
+	
+	.sideMenu ul {
+		list-style: none;
+	}
+	
+	.sideMenu ul li {
+		list-style: none;
+		list-display: none;
+		padding: 10px;
+		border-color: red;
+		border-width: 1px;
+		border-style: solid;
+	}
+	
+	.sideMenu ul li a {
+		color: black;
+		font-weight: bold;
+		font-style: oblique;
+	}
+	
+	.sideMenu ul li a:hover {
+		color: red;
+		font-weight: bold;
+		font-style: italic;
+	}
+	
+	h1 {
+		position: absolute;
+		align-content: center;
+	}
+	.maincontent {
+		margin-left: 250px;
+		position: absolute;
+		top: 100px
+
+	}

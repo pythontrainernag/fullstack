@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<meta charset="ISO-8859-1">
+{% block title %} 
+{% endblock %}
+<link rel="StyleSheet" type="text/css" href = "{% static 'css/base.css' %}" >
+</head>
+<body>
+<h1>Library Management System</h1>
+<div class="sideMenu">
+	<ul>
+		<li><a href="/lib/authors/">Authors</a></li>
+		<li><a href="/lib/addbook/">new book</a></li>
+		<li><a href="/lib/addauthor/">New Authors</a></li>
+		<li><a href="/lib/addpub/">New Publisher</a></li>
+	</ul>
+</div>
+{% block maincontent %}
+<p class="maincontent">This is main content </p>
+{% endblock %}
+</body>
+</html>

@@ -2,9 +2,9 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-from django.http.response import HttpResponse
+from django.http.response import HttpResponse, HttpResponseRedirect
 from .models import Author
-from .forms import AuthorForm
+from .forms import AuthorForm, PublisherForm, BookForm
 
 # Create your views here.
 
@@ -29,7 +29,7 @@ def author_data(request):
     return render(request, 'author.html', {'objs': x})
 
 def add_author(request):
-    form = AuthorForm(request.GET)
+    form = AuthorForm(request.POST)
     if form.is_valid():
         data = form.cleaned_data
         db_obj = Author(first_name=data['first_name'], last_name=data['last_name'], email=data['email'])
@@ -39,3 +39,18 @@ def add_author(request):
 
 def success(request):
     return render(request, 'success.html')
+
+def addpub(request):
+    form = PublisherForm(request.GET)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect("/lib/success/")
+    return render(request, 'addpub.html', {'form': PublisherForm()})
+
+
+def addbook(request):
+    form = BookForm(request.GET)
+    if form.is_valid():
+        form.save()
+        return HttpResponse("<h1>book successfully added</h1>")
+    return render(request, 'addbook.html', {'form': BookForm()})
