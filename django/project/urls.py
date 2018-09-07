@@ -17,6 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from .views import hello, first, sec, parameter, json_res
 from library import urls as lib_urls
+from django.contrib.auth import urls as auth_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -25,5 +26,6 @@ urlpatterns = [
     url(r'^first/sec/$', sec),
     url(r'^first/(?P<id>[0-9]+)/$', parameter),
     url(r'^(?P<id>[0-9]+)/$', json_res),
-    url(r'^lib/', include(lib_urls))
+    url(r'^lib/', include(lib_urls)),
+    url(r'^accounts/', include(auth_urls)),
 ]

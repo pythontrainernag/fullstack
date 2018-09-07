@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.http.response import HttpResponse, HttpResponseRedirect
 from .models import Author
 from .forms import AuthorForm, PublisherForm, BookForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -47,7 +48,7 @@ def addpub(request):
         return HttpResponseRedirect("/lib/success/")
     return render(request, 'addpub.html', {'form': PublisherForm()})
 
-
+@login_required
 def addbook(request):
     form = BookForm(request.GET)
     if form.is_valid():
