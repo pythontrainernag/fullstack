@@ -14,8 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
-from .views import first, sec, first_html, sec_html, log_html, author_data, add_author, addpub, addbook, success
-
+from .views import first, sec, first_html, sec_html, log_html, author_data, add_author, addpub, addbook, success,\
+AuthorList
+from django.views.generic import ListView, DetailView
+from .models import Author
 
 urlpatterns = [
     url(r'^$', first),
@@ -28,4 +30,7 @@ urlpatterns = [
     url(r'^addpub/$', addpub),
     url(r'^addbook/$', addbook),
     url(r'^success/$', success),
+    url(r'^va/$', AuthorList.as_view()),
+    url(r'^va/(?P<pk>[0-9]+)$', DetailView.as_view(model=Author, template_name='detail.html')),    
+     url(r'^va1/$', ListView.as_view(model = Author, template_name='va.html', queryset=Author.objects.filter(name__contains = 'n'))),
 ]

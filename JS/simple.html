@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+#mydiv {
+	height: 100px;
+	width: 100px;
+	background-color: red
+}
+</style>
+</head>
+<body>
+<div id="mydiv" onmouseover="myfun()"  onmouseout="myfun1()">
+	<p ></p>
+</div>
+<p id="p1"> This is a text</p>
+<input id = "i1" type="text"/>
+<script type="text/javascript">
+	function myfun(){
+		x = document.getElementById("mydiv");
+		x.style.height = "200px";
+		x.style.width = "300px";
+		
+	}
+	function myfun1(){
+		x = document.getElementById("mydiv");
+		x.style.height = "100px";
+		x.style.width = "100px";
+		
+	}
+	
+	var obj = document.getElementById("i1")
+	obj.addEventListener("keyup", changeText);
+	
+	function changeText(){
+		
+		var p_obj = document.getElementById("p1")
+		var x = p_obj.innerText
+		p_obj.innerText = x.slice(0, -1)
+	}
+</script>
+</body>
+</html>

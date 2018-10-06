@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form>
+	<input type="text" id="fir">
+	<input type="text" id="sec">
+	<input type="text" id="thi">
+	<input type="number" id="four">
+	<button type="button" onclick="insert()">Submit</button>
+</form>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<script type="text/javascript">
+	function insert(){
+		var v1 = document.getElementById('fir').value;
+		var v2 = document.getElementById('sec').value;
+		console.log("v1 is ");
+		console.log(v1);
+		console.log("v2 is ");
+		console.log(v2);
+		console.log(typeof(parseInt(v1)));
+		var v3 = parseInt(v1)+parseInt(v2);
+		var thi = document.getElementById('thi');
+		thi.value = v3;
+		var v4 = parseInt(document.getElementById('four').value);
+		if (v4 > 10){
+			alert("enter a value less than 10");
+		}
+		var i = 1;
+		var output = "";
+		while (i<=10){
+			if (i<10){
+				output = output+i+",";
+			}
+			else {
+				output = output+i;
+			}
+			i = i+1;
+			
+		}
+	   var d = document.getElementById('demo');
+	   console.log(output)
+	   d.innerHTML = output;
+	   
+	   var output1 = "";
+		for (var i=1;i<=10; i=i+1){
+			if (i<10){
+				output1 = output1+i+",";
+			}
+			else {
+				output1 = output1+i;
+			}
+			
+		}
+	   var d1 = document.getElementById('demo1');
+	   console.log(output1)
+	   d1.innerHTML = output1;
+	}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
+ <link rel="stylesheet" href="custom.css" type="text/css">
+</head>
+<body>
+<nav class = "navbar navbar-expand-lg navbar-dark bg-dark" id="mainNav">
+  	   <a class = "navbar-brand" href="#"><img src="64.jpg" width="50px" height="50px" alt="SungardAS"/> &nbsp; Core Manager</a>
+  	   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+	  </button>
+	  <br>
+	  <div class="sidebar collapse navbar-collapse" id = "navbarResponsive">
+	  	<ul class="navbar-nav navbar-sidenav">
+	  		<li class="nav-item" title="Dashboard">
+	  			<a class="nav-link" href="/"><i class="fas fa-tachometer-alt"></i>&nbsp<span class="nav-link-text" >Dashboard</span></a>
+	  		</li>
+	  		<li class="nav-item dropdown" data-toggle="tooltip" title="Sites">
+	  			<a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" id="#secondlevelmenu" href="#secondlevelmenu"><i class="fa fa-sitemap" aria-hidden="true"></i>&nbsp &nbsp<span class="nav-link-text">Sites</span></a>
+	  				<ul class="collapse" id="secondlevelmenu"> 
+	  				<li>
+                    	<a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti111">sample</a>
+    					<ul class = "collapse" id="collapseMulti111">                
+		  					<li>
+                            <a href="#">first</a>
+                        </li>
+                        <li>
+                            <a href="#">Second</a>
+                        </li>
+                        <li>
+                            <a href="#">third</a>
+                        </li>
+                        <li>
+                            <a href="#">fourth</a>
+                        </li>
+                      </ul>
+                      </li>
+	  				</ul>
+	  		</li>
+	  		
+	  	</ul>
+	  </div>  	
+  	</nav>
+<div class = "wrapper">
+<div class = "container">
+	<div>
+		
+		<ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tabs-1">Dashboard</a></li>
+            <li class="nav-item active"><a class="nav-link" data-toggle="tab" href="#tabs-2">Dashboard1</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tabs-3">Dashboard2</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tabs-4">Dashboard3</a></li>
+        </ul>
+		
+		<div class="tab-content">
+		
+			<div id="tabs-1" class="tab-pane active">
+				<p>wait dashbord</p>
+			</div>
+		
+			<div id="tabs-2" class ="tab-pane">
+			
+				<h3> tab 2</h3>
+			</div>
+			
+					<div id="tabs-3" class="tab-pane">
+				<p>wait provisioning</p>
+			</div>
+			
+			<div id="tabs-3" class="tab-pane">
+				<p>wait reports</p>
+			</div>
+		
+		</div>
+	</div>
+	</div>
+
+
+</div>
+</body>
+</html>

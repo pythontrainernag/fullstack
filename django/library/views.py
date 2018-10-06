@@ -6,6 +6,7 @@ from django.http.response import HttpResponse, HttpResponseRedirect
 from .models import Author
 from .forms import AuthorForm, PublisherForm, BookForm
 from django.contrib.auth.decorators import login_required
+from django.views.generic import TemplateView, ListView
 
 # Create your views here.
 
@@ -55,3 +56,9 @@ def addbook(request):
         form.save()
         return HttpResponse("<h1>book successfully added</h1>")
     return render(request, 'addbook.html', {'form': BookForm()})
+
+
+class AuthorList(ListView):
+    model = Author
+    template_name = 'va.html'
+    context_object_name = 'book_list'
